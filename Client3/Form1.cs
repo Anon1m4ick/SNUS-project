@@ -1,4 +1,4 @@
-﻿using Client1.ServiceReference1;
+﻿using Client3.ServiceReference1;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Client1
+namespace Client3
 {
     public partial class Form1 : Form, ServiceReference1.IService1Callback
     {
@@ -20,15 +20,11 @@ namespace Client1
         private Timer _sensorTimer;
         private CausalMiddleware _middleware;
      
-        public Form1() : this(0) // Default constructor for designer
-     {
-      }
-
-   public Form1(int sensorId)
-    {
-          InitializeComponent();
-         _sensorId = sensorId;
-      InitializeSensor();
+        public Form1()
+        {
+            InitializeComponent();
+            _sensorId = 2; // Sensor 2
+            InitializeSensor();
         }
 
         private void InitializeSensor()
