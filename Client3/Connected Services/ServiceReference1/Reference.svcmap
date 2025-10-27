@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="d76c158e-ecd3-401e-9628-565e5e6a3aa5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/ProjectSNUS/Service1/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="88e492cd-4b32-4903-a313-2783340146d7" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ProjectSNUS/Service1/?wsdl" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="b6d58125-705d-4cc4-9ee2-6a5755f3e1c0" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ProjectSNUS/Service1/?disco" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="e29c18c4-daac-44f1-b0a6-dbfd0b06334e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ProjectSNUS/Service1/?xsd=xsd0" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="0d655d05-9802-4dc9-b1bb-a2b3a9489ce1" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ProjectSNUS/Service1/?xsd=xsd1" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="c22915d7-0a99-4d0e-8d5a-0a6a8f68b8ff" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ProjectSNUS/Service1/?xsd=xsd3" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="a15ca8fd-ed4e-4db5-9368-864b85bcb726" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ProjectSNUS/Service1/?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

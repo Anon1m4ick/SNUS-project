@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Client1
+namespace Client3
 {
     internal static class Program
     {
@@ -12,19 +12,11 @@ namespace Client1
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main(string[] args)
+        static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            // Parse sensor ID from command line arguments
-            int sensorId = 0; // Default
-            if (args.Length > 0 && int.TryParse(args[0], out int id))
-            {
-                sensorId = id;
-            }
-
-            Application.Run(new Form1(sensorId));
+            Application.Run(new Form1());
         }
     }
 }
