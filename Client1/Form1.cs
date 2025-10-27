@@ -30,7 +30,7 @@ namespace Client1
         private void InitializeSensor()
         {
             var context = new InstanceContext(this);
-            _client = new ServiceReference1.Service1Client(context);
+            _client = new ServiceReference1.Service1Client(context, "WSDualHttpBinding_IService1");
 
             _client.RegisterSensor(_sensorId);
         }
