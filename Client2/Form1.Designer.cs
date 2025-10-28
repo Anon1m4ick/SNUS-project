@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
         this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.TextBox();
      this.button1 = new System.Windows.Forms.Button();
      this.SuspendLayout();
     // 
@@ -40,18 +40,21 @@
        this.textBox1.Size = new System.Drawing.Size(680, 22);
    this.textBox1.TabIndex = 0;
             // 
-            // label1
+            // label1 (logTextBox)
       // 
-            this.label1.AutoSize = false;
+            this.label1.Multiline = true;
    this.label1.Location = new System.Drawing.Point(12, 12);
        this.label1.Name = "label1";
        this.label1.Size = new System.Drawing.Size(776, 340);
           this.label1.TabIndex = 1;
-          this.label1.Text = "Sensor Log";
+          this.label1.Text = "";
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.BackColor = System.Drawing.Color.White;
          this.label1.Font = new System.Drawing.Font("Consolas", 9F);
-       // 
+          this.label1.ReadOnly = true;
+            this.label1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.label1.WordWrap = false;
+            // 
   // button1
             // 
    this.button1.Location = new System.Drawing.Point(698, 358);
@@ -80,7 +83,7 @@
         #endregion
 
   private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox label1;
         private System.Windows.Forms.Button button1;
     }
 }

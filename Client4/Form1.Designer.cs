@@ -28,51 +28,58 @@
   /// </summary>
         private void InitializeComponent()
         {
-        this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-     this.button1 = new System.Windows.Forms.Button();
-     this.SuspendLayout();
-    // 
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 360);
+            this.textBox1.Location = new System.Drawing.Point(9, 292);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-       this.textBox1.Size = new System.Drawing.Size(680, 22);
-   this.textBox1.TabIndex = 0;
+            this.textBox1.Size = new System.Drawing.Size(511, 20);
+            this.textBox1.TabIndex = 0;
             // 
             // label1
-      // 
-            this.label1.AutoSize = false;
-   this.label1.Location = new System.Drawing.Point(12, 12);
-       this.label1.Name = "label1";
-       this.label1.Size = new System.Drawing.Size(776, 340);
-          this.label1.TabIndex = 1;
-          this.label1.Text = "Sensor Log";
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.BackColor = System.Drawing.Color.White;
-         this.label1.Font = new System.Drawing.Font("Consolas", 9F);
-       // 
-  // button1
             // 
-   this.button1.Location = new System.Drawing.Point(698, 358);
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Consolas", 9F);
+            this.label1.Location = new System.Drawing.Point(9, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.label1.Multiline = true;
+            this.label1.Name = "label1";
+            this.label1.ReadOnly = true;
+            this.label1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.label1.Size = new System.Drawing.Size(582, 277);
+            this.label1.TabIndex = 1;
+            this.label1.WordWrap = false;
+            this.label1.TextChanged += new System.EventHandler(this.label1_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(524, 291);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-    this.button1.Size = new System.Drawing.Size(90, 26);
+            this.button1.Size = new System.Drawing.Size(68, 21);
             this.button1.TabIndex = 2;
-   this.button1.Text = "Send";
+            this.button1.Text = "Send";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
-    // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-        this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 400);
- this.Controls.Add(this.button1);
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(600, 325);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-     this.Name = "Form1";
-        this.Text = "Sensor 0 - Causal Broadcast";
-  this.ResumeLayout(false);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "Form1";
+            this.Text = "Sensor 0 - Causal Broadcast";
+            this.ResumeLayout(false);
             this.PerformLayout();
 
         }
@@ -80,7 +87,7 @@
         #endregion
 
   private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox label1;
         private System.Windows.Forms.Button button1;
     }
 }

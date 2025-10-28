@@ -127,10 +127,16 @@ namespace Client1
                 return;
             }
 
-            if (label1.Text.Length > 5000)
-                label1.Text = "";
+            // Keep a reasonable maximum size
+            if (label1.TextLength > 100000)
+            {
+                label1.Clear();
+            }
 
-            label1.Text += text + Environment.NewLine;
+            // Append and scroll to end
+            label1.AppendText(text + Environment.NewLine);
+            label1.SelectionStart = label1.TextLength;
+            label1.ScrollToCaret();
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
