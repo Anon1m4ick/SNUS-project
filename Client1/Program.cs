@@ -8,17 +8,13 @@ namespace Client1
 {
     internal static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main(string[] args)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // Parse sensor ID from command line arguments
-            int sensorId = 0; // Default
+            int sensorId = 0; 
             if (args.Length > 0 && int.TryParse(args[0], out int id))
             {
                 sensorId = id;

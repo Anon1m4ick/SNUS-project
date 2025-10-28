@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.Text;
@@ -19,7 +20,7 @@ namespace Client4
         private int _sensorId;
         private Timer _sensorTimer;
         private CausalMiddleware _middleware;
-     
+
         public Form1()
         {
             InitializeComponent();
@@ -115,6 +116,24 @@ namespace Client4
             // For now, it's displayed in the log
         }
 
+        // Win32 messages for TextBox scrolling
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        private static extern IntPtr SendMessage(IntPtr hWnd, int Msg, IntPtr wParam, IntPtr lParam);
+
+        private const int EM_SETSEL = 0x00B1;
+        private const int EM_SCROLLCARET = 0x00B7;
+
+        private void ForceScrollToEnd(TextBox tb)
+        {
+            if (tb == null || !tb.IsHandleCreated)
+                return;
+
+            int len = tb.TextLength;
+            // Set selection to the end and scroll caret into view
+            SendMessage(tb.Handle, EM_SETSEL, (IntPtr)len, (IntPtr)len);
+            SendMessage(tb.Handle, EM_SCROLLCARET, IntPtr.Zero, IntPtr.Zero);
+        }
+
         private void AppendLog(string text)
         {
             if (InvokeRequired)
@@ -123,10 +142,15 @@ namespace Client4
                 return;
             }
 
-            if (label1.Text.Length > 5000)
-                label1.Text = "";
+            // Keep a reasonable maximum size
+            if (label1.TextLength > 100000)
+            {
+                label1.Clear();
+            }
 
-            label1.Text += text + Environment.NewLine;
+            // Append and force scroll to end even when control doesn't have focus
+            label1.AppendText(text + Environment.NewLine);
+            ForceScrollToEnd(label1);
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -145,6 +169,11 @@ namespace Client4
             {
                 // Ignore errors on close
             }
+        }
+
+        private void label1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
